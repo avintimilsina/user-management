@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone_number')->unique()->required();
             $table->string('identification_number')->unique()->required();
-            $table->enum('gender', ["male","female","other"])->required();
+            $table->enum('gender', ["Male","Female","Other"])->required();
             $table->date('date_of_birth')->required();
             $table->string('country');
             $table->string('province');

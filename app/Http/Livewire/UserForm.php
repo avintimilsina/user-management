@@ -51,7 +51,22 @@ class UserForm extends Component
             "province"=> $this->province,
             "zipcode"=> $this->zipcode,
         ]);
+    $this->reset([
+        'first_name',
+        'last_name',
+        'email',
+        'phone_number',
+        'identification_number',
+        'gender',
+        'date_of_birth',
+        'country',
+        'street_address',
+        'city',
+        'province',
+        'zipcode',
+    ]);
     }
+    
     public function render()
     {
         return view('livewire.user-form');
