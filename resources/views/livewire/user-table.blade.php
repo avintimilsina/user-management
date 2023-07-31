@@ -39,7 +39,7 @@
                                     Gender</th>
                                 <th scope="col" class="px-2 py-3.5 text-left text-sm font-semibold text-gray-900">
                                     DOB</th>
-                                <th scope="col" class="px-2 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                <th scope="col" class="px-2 py-3.5 text-left text-sm font-semibold text-gray-900 ">
                                     About</th>
                                 <th scope="col" class="px-2 py-3.5 text-left text-sm font-semibold text-gray-900">
                                     Address</th>
@@ -79,7 +79,8 @@
                                     <td class="whitespace-nowrap px-2 py-4 text-sm text-gray-500">
                                         {{ $user->date_of_birth }}
                                     </td>
-                                    <td class="whitespace-nowrap px-2 py-4 text-sm text-gray-500">
+                                    <td
+                                        class="whitespace-nowrap px-2 py-4 text-sm text-gray-500 max-w-xs overflow-hidden">
                                         {{ $user->about }}
                                     </td>
                                     <td class="whitespace-nowrap px-2 py-4 text-sm text-gray-500">

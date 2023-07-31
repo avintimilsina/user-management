@@ -128,6 +128,13 @@ class UserForm extends Component
 
         ]);
 
+
+
+        return Redirect::to('/success?id=' . User::latest()->first()->id);
+    }
+
+    public function resetManually()
+    {
         $this->reset([
             'first_name',
             'last_name',
@@ -143,8 +150,6 @@ class UserForm extends Component
             'province',
             'zipcode',
         ]);
-
-        return Redirect::to('/success?id=' . User::latest()->first()->id);
     }
 
     public function render()
