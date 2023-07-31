@@ -21,6 +21,7 @@ class UserForm extends Component
     public $city;
     public $province;
     public $zipcode;
+    public $about;
     protected $rules = [
         'first_name' => 'required',
         'last_name' => 'required',
@@ -34,6 +35,7 @@ class UserForm extends Component
         'city' => 'required',
         'province' => 'required',
         'zipcode' => 'required',
+        'about' => 'required',
     ];
 
     public function mount()
@@ -51,6 +53,7 @@ class UserForm extends Component
             $this->city = $this->user->city;
             $this->province = $this->user->province;
             $this->zipcode = $this->user->zipcode;
+            $this->about = $this->user->about;
         }
     }
     public function submit()
@@ -69,6 +72,8 @@ class UserForm extends Component
                 'city' => 'required',
                 'province' => 'required',
                 'zipcode' => 'required',
+                'about' => 'required',
+
             ]);
 
             User::where('id', $this->user->id)->update([
@@ -84,6 +89,8 @@ class UserForm extends Component
                 "city" => $this->city,
                 "province" => $this->province,
                 "zipcode" => $this->zipcode,
+                "about" => $this->about,
+
             ]);
             $this->reset([
                 'first_name',
@@ -98,6 +105,8 @@ class UserForm extends Component
                 'city',
                 'province',
                 'zipcode',
+                'about',
+
             ]);
             return Redirect::to('/success?id=' . $this->user->id);
         }
@@ -115,6 +124,8 @@ class UserForm extends Component
             "city" => $this->city,
             "province" => $this->province,
             "zipcode" => $this->zipcode,
+            "about" => $this->about,
+
         ]);
 
         $this->reset([
@@ -123,6 +134,7 @@ class UserForm extends Component
             'email',
             'phone_number',
             'identification_number',
+            'about',
             'gender',
             'date_of_birth',
             'country',

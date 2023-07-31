@@ -27,5 +27,6 @@ class User extends Model
         'city',
         'street_address',
         'zipcode',
+        'about'
     ];
 }
