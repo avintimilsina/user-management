@@ -25,11 +25,13 @@ User Link is a powerful User Management software built using Laravel and Livewir
 
 ## Technologies Used
 
--   Laravel: A popular PHP web application framework, providing a robust foundation for building web applications.
--   Livewire: A full-stack framework for Laravel that enables real-time, dynamic interactions with the server through simple PHP components.
--   Pest: A concise PHP testing framework with an elegant syntax and outstanding developer experience.
--   Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
--   Sqlite: A lightweight, serverless database engine that is quick and easy to set up.
+<div style="display: flex; flex-wrap: wrap;">
+<img src="https://img.icons8.com/?size=50&id=hUvxmdu7Rloj&format=png" title="Laravel" alt="Laravel" width="50" height="50" />
+<img src="https://avatars.githubusercontent.com/u/51960834?s=200&v=4" title="Livewire" alt="Livewire" width="50" height="50" />
+<img src="https://pestphp.com/www/assets/logo.svg" title="Pest" alt="Pest" width="100" height="50" />
+<img src="https://img.icons8.com/?size=512&id=ldAV1F3sx1VI&format=png" title="SQL Lite" alt="SQL Lite" width="50" height="50" />
+<img src="https://img.icons8.com/color/48/000000/tailwindcss.png" title="TailwindCSS" alt="TailwindCSS" width="50" height="50" />
+</div>
 
 ## Installation
 
@@ -37,39 +39,39 @@ To install User Link, follow these steps:
 
 1. Clone the repository from GitHub:
 
-```bash
+```bash copy
 git clone https://github.com/avintimilsina/user-management.git
 cd user-management
 ```
 
 2. Install the required dependencies using Composer:
 
-```bash
+```bash copy
 composer install
 ```
 
 3. Set up the environment file:
 
-```bash
+```bash copy
 cp .env.example .env
 ```
 
 4. Create the database and set its credentials in the `.env` file.
 5. . Run the migrations and seed the database:
 
-```bash
+```bash copy
 php artisan migrate --seed
 ```
 
 6. Start the development server:
 
-```bash
+```bash copy
 php artisan serve
 ```
 
 7. Start Vite development server:
 
-```bash
+```bash copy
 npm run dev
 ```
 
@@ -79,7 +81,7 @@ Now, the User Link application should be up and running at `http://localhost:800
 
 User Link comes with a comprehensive test suite written using Pest to ensure the reliability and stability of the software. To run the tests, execute the following command:
 
-```bash
+```bash copy
 ./vendor/bin/pest
 ```
 
