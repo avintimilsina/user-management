@@ -9,7 +9,7 @@ class AllUsers extends Component
 {
     public function allUsers()
     {
-        return view('livewire.user-table', [
+        return view('users', [
             'users' => User::all(),
         ]);
     }

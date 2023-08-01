@@ -26,7 +26,7 @@ class UserForm extends Component
         'first_name' => 'required',
         'last_name' => 'required',
         'email' => 'required|email|unique:users,email',
-        'phone_number' => 'required|digits:10',
+        'phone_number' => 'required|min:10',
         'identification_number' => 'required|numeric',
         'gender' => 'required',
         'date_of_birth' => 'required|date',
@@ -59,11 +59,12 @@ class UserForm extends Component
     public function submit()
     {
         if (!!optional($this)->user) {
+
             $this->validate([
                 'first_name' => 'required',
                 'last_name' => 'required',
                 'email' => ['required', 'email', 'unique:users,email,' . $this->user->id],
-                'phone_number' => 'required|digits:10',
+                'phone_number' => 'required|min:10',
                 'identification_number' => 'required|numeric',
                 'gender' => 'required',
                 'date_of_birth' => 'required|date',
@@ -92,6 +93,7 @@ class UserForm extends Component
                 "about" => $this->about,
 
             ]);
+
             $this->reset([
                 'first_name',
                 'last_name',
@@ -108,7 +110,7 @@ class UserForm extends Component
                 'about',
 
             ]);
-            return Redirect::to('/success?id=' . $this->user->id);
+            return redirect()->to('/success?id=' . $this->user->id);
         }
         $this->validate();
         User::create([
@@ -128,9 +130,7 @@ class UserForm extends Component
 
         ]);
 
-
-
-        return Redirect::to('/success?id=' . User::latest()->first()->id);
+        return redirect()->to('/success?id=' . User::latest()->first()->id);
     }
 
     public function resetManually()

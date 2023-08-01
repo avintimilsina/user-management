@@ -93,9 +93,9 @@ test('It displays phone number is required error message', function () {
 
 test('It displays phone number must be 10 digits long', function () {
     livewire(UserForm::class)
-        ->set('phone_number', '826128901683')
+        ->set('phone_number', '82612')
         ->call('submit')
-        ->assertHasErrors(['phone_number' => 'digits:10']);
+        ->assertHasErrors(['phone_number' => 'min:10']);
 });
 
 test('It displays identification number is required error message', function () {
@@ -223,12 +223,12 @@ test(
     }
 );
 
-// test(
-//     'It displays the result page with the correct data',
-//     function () {
-//         User::factory()->create(['email' => 'sucess@page.com']);
-//         get('/success?id=' . User::latest()->first()->id . '&is=' . User::latest()->first()->id . '&pnr=' . User::latest()->first()->pnr)
-//             ->assertOk();
-//         User::find(User::latest()->first()->id)->delete();
-//     }
-// );
+test(
+    'It displays the success page with the correct user data',
+    function () {
+        User::factory()->create(['email' => 'sucess@page.com']);
+        get('/success?id=' . User::latest()->first()->id)
+            ->assertOk();
+        User::find(User::latest()->first()->id)->delete();
+    }
+);
