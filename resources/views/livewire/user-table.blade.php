@@ -7,10 +7,11 @@
         </div>
 
     </div>
-    <div class="mt-8 flex flex-col">    
-            <div class="my-4">
-                {{ $users->links() }}
-            </div>
+    <div class="mt-8 flex flex-col">
+        <div class="my-4 items-end w-full">
+            {{ $users->links() }}
+        </div>
+
         <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                 <div class="relative overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -41,6 +42,9 @@
                                     Country</th>
                                 <th scope="col" class="px-2 py-3.5 text-left text-sm font-semibold text-gray-900">
                                     Zipcode</th>
+                                <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                                    <span class="sr-only">View</span>
+                                </th>
                                 <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                                     <span class="sr-only">Edit</span>
                                 </th>
@@ -88,6 +92,11 @@
                                     </td>
                                     <td class="whitespace-nowrap px-2 py-4 text-sm text-gray-500">
                                         {{ $user->zipcode }}
+                                    </td>
+                                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                        <a href="/success?id={{ $user->id }}"
+                                            class="text-indigo-600 hover:text-indigo-900">View</a>
+
                                     </td>
 
                                     <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">

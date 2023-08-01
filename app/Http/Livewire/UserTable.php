@@ -14,18 +14,10 @@ class UserTable extends Component
     {
         User::destroy($id);
     }
-
-    public function edit($id)
-    {
-        return view('livewire.user-form');
-    }
-
-
     public function render()
     {
         return view('livewire.user-table', [
-            'users' => User::paginate(10),
+            'users' => User::latest()->paginate(10),
         ]);
     }
-   
 }

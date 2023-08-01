@@ -14,4 +14,6 @@ Route::get('/success', function () {
     return view('result');
 });
 
-Route::get('/users', [AllUsers::class, 'allUsers']);
+Route::get('/users',  function () {
+    return view('users');
+});

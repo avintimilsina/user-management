@@ -2,12 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Http\Livewire\AddParticipant;
-use App\Http\Livewire\EditForm;
 use App\Http\Livewire\Navbar;
 use App\Http\Livewire\Footer;
 use App\Http\Livewire\UserForm;
-use App\Models\Event;
 use App\Models\User;
 
 use function Pest\Laravel\get;
