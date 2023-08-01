@@ -15,9 +15,9 @@
 <body>
     <div class="mx-4 sm:mx-20 lg:mx-40">
         <livewire:navbar />
-        @yield('content')
-        {{-- <livewire:footer /> --}}
     </div>
+    @yield('content')
+    <livewire:footer />
     @livewireScripts
 </body>
 

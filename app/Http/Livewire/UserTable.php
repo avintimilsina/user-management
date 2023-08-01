@@ -14,8 +14,9 @@ class UserTable extends Component
     {
         User::destroy($id);
     }
-    
-    public function edit($id){
+
+    public function edit($id)
+    {
         return view('livewire.user-form');
     }
 
@@ -26,4 +27,5 @@ class UserTable extends Component
             'users' => User::paginate(10),
         ]);
     }
+   
 }
