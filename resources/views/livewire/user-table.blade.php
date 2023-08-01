@@ -11,7 +11,6 @@
         <div class="my-4 items-end w-full">
             {{ $users->links() }}
         </div>
-
         <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                 <div class="relative overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -93,18 +92,21 @@
                                     <td class="whitespace-nowrap px-2 py-4 text-sm text-gray-500">
                                         {{ $user->zipcode }}
                                     </td>
-                                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                    <td
+                                        class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                         <a href="/success?id={{ $user->id }}"
                                             class="text-indigo-600 hover:text-indigo-900">View</a>
 
                                     </td>
 
-                                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                    <td
+                                        class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                         <a href="/edit?id={{ $user->id }}"
                                             class="text-indigo-600 hover:text-indigo-900">Edit</a>
 
                                     </td>
-                                    <td class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                                    <td
+                                        class="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                                         <button wire:click="delete({{ $user->id }})"
                                             class="text-indigo-600 hover:text-indigo-900">Delete</button>
 

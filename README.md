@@ -1,66 +1,98 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+    <img src="public\logo.svg" alt="Logo" width="160" height="80"/>
+    <br/>
+    <br/>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)
 
-## About Laravel
+</div>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# User Link - User Management Software
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+User Link is a powerful User Management software built using Laravel and Livewire, allowing you to easily manage user details, view user information, and edit user data with efficiency and ease. The software comes with a comprehensive test suite written using Pest, ensuring a 100% coverage of the feature tests to ensure reliable functionality.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Features
 
-## Learning Laravel
+-   Add new users to the system with relevant details.
+-   View user information in a clear and organized manner.
+-   Edit user information and keep data up-to-date.
+-   Delete users from the system.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Technologies Used
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   Laravel: A popular PHP web application framework, providing a robust foundation for building web applications.
+-   Livewire: A full-stack framework for Laravel that enables real-time, dynamic interactions with the server through simple PHP components.
+-   Pest: A concise PHP testing framework with an elegant syntax and outstanding developer experience.
+-   Tailwind CSS: A utility-first CSS framework for rapidly building custom user interfaces.
+-   Sqlite: A lightweight, serverless database engine that is quick and easy to set up.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+To install User Link, follow these steps:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clone the repository from GitHub:
 
-### Premium Partners
+```bash
+git clone https://github.com/avintimilsina/user-management.git
+cd user-management
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+2. Install the required dependencies using Composer:
+
+```bash
+composer install
+```
+
+3. Set up the environment file:
+
+```bash
+cp .env.example .env
+```
+
+4. Create the database and set its credentials in the `.env` file.
+5. . Run the migrations and seed the database:
+
+```bash
+php artisan migrate --seed
+```
+
+6. Start the development server:
+
+```bash
+php artisan serve
+```
+
+7. Start Vite development server:
+
+```bash
+npm run dev
+```
+
+Now, the User Link application should be up and running at `http://localhost:8000`.
+
+## Running Tests
+
+User Link comes with a comprehensive test suite written using Pest to ensure the reliability and stability of the software. To run the tests, execute the following command:
+
+```bash
+./vendor/bin/pest
+```
+
+The Pest framework will handle the rest and display the test results along with the coverage report, ensuring a 100% coverage of the feature tests.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+We welcome contributions from the community to enhance and improve User Link. If you find any bugs, issues, or have new feature suggestions, please open an issue or submit a pull request. We appreciate your valuable input.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+User Link is open-source software licensed under the [MIT License](./LICENSE.txt).
+
+---
+
+Thank you for choosing User Link for your User Management needs! If you have any questions or need assistance, please feel free to reach out to our support team at support@userlink.com. Happy managing!

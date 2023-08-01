@@ -10,6 +10,7 @@
     @vite('resources/css/app.css')
     @livewireStyles
 
+
 </head>
 
 <body>
@@ -19,6 +20,13 @@
     @yield('content')
     <livewire:footer />
     @livewireScripts
+    <script>
+        const paginator = document.querySelector('[aria-label="Pagination Navigation"]').firstChild
+        paginator.nextSibling.classList.remove('sm:hidden')
+        paginator.nextSibling.classList.remove('justify-between')
+        paginator.nextSibling.nextSibling.nextSibling.classList.remove('sm:justify-between')
+        paginator.nextSibling.nextSibling.nextSibling.classList.add('justify-end')
+    </script>
 </body>
 
 </html>
