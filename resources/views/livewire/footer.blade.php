@@ -21,7 +21,8 @@
                     </svg>
                 </a>
 
-                <a href="https://www.instagram.com/avin_timilsina/" class="text-gray-400 hover:text-gray-500">
+                <a href="https://www.instagram.com/avin_timilsina/" class="text-gray-400 hover:text-gray-500 "
+                    target="_blank">
                     <span class="sr-only">Instagram</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"
@@ -30,7 +31,7 @@
                     </svg>
                 </a>
 
-                <a href="https://twitter.com/avin_timilsina" class="text-gray-400 hover:text-gray-500">
+                <a href="https://twitter.com/avin_timilsina" class="text-gray-400 hover:text-gray-500" target="_blank">
                     <span class="sr-only">Twitter</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
@@ -38,7 +39,7 @@
                     </svg>
                 </a>
 
-                <a href="https://github.com/avintimilsina" class="text-gray-400 hover:text-gray-500">
+                <a href="https://github.com/avintimilsina" class="text-gray-400 hover:text-gray-500" target="_blank">
                     <span class="sr-only">GitHub</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"
@@ -47,7 +48,8 @@
                     </svg>
                 </a>
 
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="text-gray-400 hover:text-gray-500">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="text-gray-400 hover:text-gray-500"
+                    target="_blank">
                     <span class="sr-only">YouTube</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"
